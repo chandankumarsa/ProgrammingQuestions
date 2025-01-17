@@ -1,0 +1,19 @@
+package Practice;
+
+class AB {
+    public static void main(String[] args) {
+        D d1 = new D(); // Creating the first object
+        D d2 = new D(); // Creating the second object
+        
+        d1.m2(); // Calling m2 on the first object
+        d2.m2(); // Calling m2 on the second object
+    }
+}
+
+class D {
+    int i; // Non-static variable
+
+    void m2() { // Non-static method
+        System.out.println(i); // Prints the value of i
+    }
+}

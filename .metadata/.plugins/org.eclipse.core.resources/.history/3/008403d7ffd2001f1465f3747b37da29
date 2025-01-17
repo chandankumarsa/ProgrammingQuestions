@@ -1,0 +1,12 @@
+package NumberProgramUsingMethod;
+
+import java.util.Scanner;
+
+public class LCM {
+public static void main(String[] args) {
+	System.out.println("Enter Two Number To Perform Lcm Operations");
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	
+}
+}

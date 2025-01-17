@@ -1,0 +1,23 @@
+package Practice;
+
+import java.util.Scanner;
+
+public class FibSeries {
+	public static void main(String[] args) {
+		System.out.println("ENter a Number");
+		int n = new Scanner(System.in).nextInt();
+		displaySeries(n);
+	}
+
+static void displaySeries(int noOfDigit) {
+	display(0,1,1,noOfDigit);
+	}
+
+static void display(int a, int b, int count, int n) {
+	if(count>n)return;
+	System.out.println(a+" ");
+	display(a, a+b, count+1, n);
+	
+}
+
+}

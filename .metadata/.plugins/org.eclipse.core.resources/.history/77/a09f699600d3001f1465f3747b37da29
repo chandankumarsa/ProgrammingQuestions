@@ -1,0 +1,21 @@
+package NumberProgramUsingMethod;
+
+import java.util.Scanner;
+
+public class LCM {
+	public static void main(String[] args) {
+		System.out.println("Enter Two Number To Perform Lcm Operations");
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+
+	}
+
+	static int lcmOfNum(int a, int b) {
+		int big = a > b ? a : b;
+		for (int lcm = big; lcm <= a*b; lcm++) {
+
+		}
+		return lcm;
+	}
+}

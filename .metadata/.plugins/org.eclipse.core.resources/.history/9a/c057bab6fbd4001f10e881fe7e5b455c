@@ -1,0 +1,29 @@
+package Practice;
+class A {
+    static int i; // Static variable
+
+    static void m1() { // Static method
+        System.out.println(i); // Accessing static variable
+    }
+}
+
+class B {
+    int i; // Non-static variable
+
+    static void m1() {
+        // System.out.println(i); // ERROR: Static method cannot access non-static variable directly
+    }
+
+    void m2() {
+        System.out.println(i); // Non-static method accessing non-static variable
+    }
+}
+
+public class AB {
+    public static void main(String[] args) {
+        A.m1(); // Calling static method of class A
+        B obj = new B(); // Creating an object of class B
+        obj.m2(); // Calling non-static method of class B
+    }
+}
+

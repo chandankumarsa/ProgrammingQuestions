@@ -1,0 +1,13 @@
+package NumberProgram;
+
+import java.util.Scanner;
+
+public class PrimeNumber {
+	public static void main(String[] args) {
+		System.out.println("Enter a Number To Check Prime Or Not");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		
+	}
+
+}

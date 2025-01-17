@@ -1,0 +1,22 @@
+package NumberProgramUsingMethod;
+
+import java.util.Scanner;
+
+public class SumOfInteger {
+	public static void main(String[] args) {
+		System.out.println("Enter a Number to CALCULATE THE SUM OF INTEGER ");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+	}
+	static int sumOfInteger(int n) {
+		
+		for(int i=1;i<=n;i++) {
+			
+		}
+	}
+
+}
+
+
+
+//CALCULATE THE SUM OF INTEGER (1 to N)

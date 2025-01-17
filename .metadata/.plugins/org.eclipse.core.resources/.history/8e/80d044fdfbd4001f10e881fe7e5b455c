@@ -1,0 +1,14 @@
+package Practice;
+class AB {
+    public static void main(String[] args) {
+       
+    }
+}
+
+class D{
+	int i;
+	void m2() {
+		System.out.println(i);
+	}
+	
+}

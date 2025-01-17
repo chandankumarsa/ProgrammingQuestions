@@ -1,0 +1,17 @@
+package Practice;
+
+import java.util.Scanner;
+
+public class FibSeries {
+	public static void main(String[] args) {
+		System.out.println("ENter a Number");
+		int n = new Scanner(System.in).nextInt();
+		displaySeries(n);
+	}
+
+static void displaySeries(int n) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
