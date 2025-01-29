@@ -1,0 +1,8 @@
+package Jan26;
+
+public class AlternatePrime {
+public static void main(String[] args) {
+	System.out.println("ENter a range to print Alternate prime number ");
+	
+}
+}

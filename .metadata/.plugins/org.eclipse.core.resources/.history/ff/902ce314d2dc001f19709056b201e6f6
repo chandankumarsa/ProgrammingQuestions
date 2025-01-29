@@ -1,0 +1,11 @@
+package Jan27;
+
+import java.util.Scanner;
+
+public class StringNumber2 {
+public static void main(String[] args) {
+	System.out.println("ENter a Number to check Strong number or not");
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+}
+}

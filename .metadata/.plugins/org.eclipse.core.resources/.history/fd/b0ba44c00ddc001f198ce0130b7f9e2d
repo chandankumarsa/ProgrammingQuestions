@@ -1,0 +1,19 @@
+package Jan26;
+
+import java.util.Scanner;
+
+public class PerfectNumberRange {
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	System.out.println("ENter a Number to Print Perfect Number in a Range");
+}
+static boolean isPerfect(int n,int i,int sum) {
+	if(i==0)return sum==n;
+	if(n%i==0) {
+		sum = sum+i;
+	}
+	isPerfect(n, i-1, sum);
+	
+}
+}

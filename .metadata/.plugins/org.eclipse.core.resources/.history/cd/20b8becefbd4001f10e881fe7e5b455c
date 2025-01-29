@@ -1,9 +1,0 @@
-package Practice;
-class AB {
-    public static void main(String[] args) {
-        A.m1(); // Calling static method of class A
-        B obj = new B(); // Creating an object of class B
-        obj.m2(); // Calling non-static method of class B
-    }
-}
-

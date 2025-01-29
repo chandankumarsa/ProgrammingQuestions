@@ -1,0 +1,15 @@
+package Jan22;
+
+import java.util.Scanner;
+
+public class FibSeries {
+	public static void main(String[] args) {
+		System.out.println("ENter a Number to find  Fib Series");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		System.out.println("nth Fib number is : "+fib(n));
+	}
+
+static int  fib(int n,int a,int b);
+
+}

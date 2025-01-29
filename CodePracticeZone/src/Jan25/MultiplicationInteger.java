@@ -1,0 +1,19 @@
+package Jan25;
+
+import java.util.Scanner;
+
+public class MultiplicationInteger {
+	public static void main(String[] args) {
+		System.out.println("Enter a Number to find the sum of the integer");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		System.out.println("Mul of Integer of a Given NUmber is : "+sum(n));
+	}
+	static int sum(int n) {
+		if(n==0||n==1) {
+			return 1;
+		}
+		return n*sum(n-1);
+	}
+
+}

@@ -1,0 +1,18 @@
+package Jan29;
+
+import java.util.Scanner;
+
+public class PrintNumber {
+public static void main(String[] args) {
+	System.out.println("ENter a Number to print 1 to n");
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	System.out.println(print(n, 1));
+}
+static int print(int n,int c) {
+	if(c>n)return n;
+	System.out.print(c+" ");
+	 print(n, c+1);
+}
+
+}

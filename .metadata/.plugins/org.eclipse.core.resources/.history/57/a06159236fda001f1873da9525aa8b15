@@ -1,0 +1,12 @@
+package Jan23;
+class Book{
+	String title;
+	String author;
+	double price;
+}
+public class Factory {
+	public static void main(String[] args) {
+	
+	}
+
+}

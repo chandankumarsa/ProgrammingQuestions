@@ -1,0 +1,15 @@
+package Jan26;
+
+import java.util.Scanner;
+
+public class AlternatePrime1 {
+	public static void main(String[] args) {
+		Scanner sc =new SCanner(System.in);
+		int st = sc.nextInt();
+		int end=sc.nextInt();
+	}
+	static boolean isPrime(int n,int i) {
+		if(n=)
+	}
+
+}

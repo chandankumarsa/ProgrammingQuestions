@@ -1,0 +1,19 @@
+package Jan22;
+
+import java.util.Scanner;
+
+public class NthFibNumber {
+	public static void main(String[] args) {
+		System.out.println("ENter a Number to find Nth Fib number");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		System.out.println("nth Fib number is : "+fib(n));
+	}
+	static int fib(int n) {
+		if(n==1)return 0;
+		if(n==2)return 1;
+		return fib(n-1)+fib(n-2);
+	}
+	
+
+}

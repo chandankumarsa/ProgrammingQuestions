@@ -1,0 +1,12 @@
+package Jan25;
+
+import java.util.Scanner;
+
+public class HcfOfTwoNUmber {
+	private void Sysout() {
+		// TODO Auto-generated method stub
+
+	}
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+}

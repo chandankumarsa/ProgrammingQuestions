@@ -1,0 +1,12 @@
+package Jan26;
+
+import java.util.Scanner;
+
+public class PerfectNumber {
+	public static void main(String[] args) {
+		System.out.println("Enter a Nnumber to check Perfect Number or not");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+	}
+
+}

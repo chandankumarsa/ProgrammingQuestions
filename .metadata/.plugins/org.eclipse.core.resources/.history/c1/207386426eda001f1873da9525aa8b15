@@ -1,0 +1,20 @@
+package Jan23;
+class X{
+	int i;
+	X(int i){
+		this.i=i;
+	}
+}
+class Y{
+	static X m1() {
+		X x1 =new X(50);
+		return x1;
+	}
+}
+public class Test {
+	public static void main(String[] args) {
+		X x1 = Y.m1();
+		System.out.println(X1.i);
+	}
+
+}

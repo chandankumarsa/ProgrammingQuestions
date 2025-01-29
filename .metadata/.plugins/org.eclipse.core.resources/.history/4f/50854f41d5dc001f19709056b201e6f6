@@ -1,0 +1,17 @@
+package Jan27;
+
+import java.util.Scanner;
+
+public class Reverse1 {
+	public static void main(String[] args) {
+		System.out.println("Enter a Number to reverse");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+	}
+	static int rev(int n,int rev) {
+		if(n==0)return rev;
+		rev = rev*10+(n%10);
+		return rev(n/10, rev)
+	}
+
+}

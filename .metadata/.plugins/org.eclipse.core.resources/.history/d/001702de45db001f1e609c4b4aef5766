@@ -1,0 +1,12 @@
+package Jan25;
+
+import java.util.Scanner;
+
+public class PrimeNumber {
+	public static void main(String[] args) {
+		System.out.println("ENter a Number to check Prime Number or not");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+	}
+
+}

@@ -1,0 +1,18 @@
+package Jan29;
+
+import java.util.Scanner;
+
+public class MultiplicationOfInteger {
+
+	public static void main(String[] args) {
+		System.out.println("Enter a Number to calculate the multiplication of the Integer");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		System.out.println("Multiplication of the Integer is : "+mul(n));
+	}
+	static int mul(int n) {
+		if(n==0 || n==1)return 1;
+		return n*mul(n-1);
+		
+	}
+}

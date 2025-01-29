@@ -1,0 +1,15 @@
+package Jan27;
+
+public class SecoundHighestPrime {
+public static void main(String[] args) {
+	
+}
+public static boolean isPrime(int n,int i) {
+	if(i<=1)return false;
+	if(i==1)return true;
+	if(n%i==0) {
+		
+	}
+	
+}
+}

@@ -1,0 +1,23 @@
+package Jan25;
+
+import java.util.Scanner;
+
+public class SumOfDigit1 {
+	public static void main(String[] args) {
+		System.out.println("ENter a Number to calculate the sum of the digit");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		System.out.println("Sum of Digit of a Given NUmber is : "+sum(n));
+	}
+
+	static int sum(int n) {
+		if(n==0) {
+			return 0;
+		}
+		int a = n%10+sum(n/10);
+		if(a>9)return sum(a);
+		return a;
+	}
+	
+
+}

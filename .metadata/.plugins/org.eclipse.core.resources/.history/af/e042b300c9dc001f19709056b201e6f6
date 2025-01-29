@@ -1,0 +1,30 @@
+package Jan27;
+
+import java.util.Scanner;
+
+public class PrimeNumberInRange {
+	public static void main(String[] args) {
+		System.out.println("ENter a Number to Print Prime Number in a Range");
+		Scanner sc = new Scanner(System.in);
+		int st  = sc.nextInt();
+		int end = sc.nextInt();
+		prime(st, end);
+	}
+	static void prime(int st,int end) {
+		if(st>end)return;
+		if(isPrime(st, st/2)) {
+			System.out.print(st+" ");
+		}
+		prime(st+1, end);
+	}
+	
+	static boolean isPrime(int n,int i) {
+		if(n<=1)return false;
+		if(i==1)return true;
+		if(n%i==0) {
+			return false;
+		}
+		return isPrime(n, i-1);
+	}
+
+}

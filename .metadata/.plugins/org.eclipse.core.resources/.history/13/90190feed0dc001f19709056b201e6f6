@@ -1,0 +1,15 @@
+package Jan27;
+
+import java.util.Scanner;
+
+public class StrongNumber1 {
+public static void main(String[] args) {
+	System.out.println("Enter a number to check Strong Number or not");
+	Scanner sc = new Scanner(System.in);
+	int  n = sc.nextInt();
+}
+static int fact(int n) {
+	if(n==0)return 1;
+	return n*fact(n-1);
+}
+}

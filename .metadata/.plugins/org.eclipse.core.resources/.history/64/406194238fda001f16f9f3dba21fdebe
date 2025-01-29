@@ -1,0 +1,19 @@
+package Jan25;
+
+import java.util.Scanner;
+
+public class Lcm {
+	public static void main(String[] args) {
+		System.out.println("Enter two number to find LCM of Number");
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+	}
+	static int findLCM(int a, int b,int lcm) {
+		if(lcm%a==0 && lcm%b==0) {
+			return lcm;
+		}
+		return findLCM(a, b, lcm+1);
+	}
+
+}

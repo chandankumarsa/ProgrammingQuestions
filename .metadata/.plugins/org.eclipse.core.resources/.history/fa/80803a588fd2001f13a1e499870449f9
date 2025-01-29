@@ -1,9 +1,0 @@
-package NumberProgram;
-
-public class SumOfInteger {
-	public static void main(String[] args) {
-		System.out.println("Enter a Number to CALCULATE THE SUM OF INTEGER ");
-		
-	}
-
-}

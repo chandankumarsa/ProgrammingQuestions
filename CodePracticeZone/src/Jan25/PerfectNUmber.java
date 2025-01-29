@@ -1,0 +1,28 @@
+package Jan25;
+
+import java.util.Scanner;
+
+public class PerfectNUmber {
+	public static void main(String[] args) {
+		System.out.println("Enter a NUmber to check Perfect Number or not :");
+		Scanner sc= new Scanner(System.in);
+		int n = sc.nextInt();
+		int sum = isPerfect(n, 1, 0);
+		if(sum==n) {
+			System.out.println("is a perfect number");
+		}
+		else {
+			System.out.println("is Not a perfect number");
+		}
+	}
+	static int isPerfect(int n,int i,int sum) {
+		if(i>n/2) {
+			return sum;
+		}
+		if(n%i==0) {
+			sum =sum+i;
+		}
+		return isPerfect(n, i+1, sum);
+	}
+
+}

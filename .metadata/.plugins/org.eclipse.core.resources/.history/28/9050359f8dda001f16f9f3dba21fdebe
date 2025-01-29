@@ -1,0 +1,12 @@
+package Jan25;
+
+import java.util.Scanner;
+
+public class SumOfInteger {
+	public static void main(String[] args) {
+		System.out.println("Enter a Number to find the sum of the integer");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+	}
+
+}

@@ -1,0 +1,21 @@
+package Jan22;
+class Car{
+	int num;
+	static int x=1000;
+	Car(){
+		num=x++;
+	}
+	void start() {
+		System.out.println(num + "Car engine Started");
+	}
+	void accelerate() {
+		System.out.println(num + "Car Accelerating");
+	}
+	
+}
+public class Dmo {
+	public static void main(String[] args) {
+		
+	}
+
+}

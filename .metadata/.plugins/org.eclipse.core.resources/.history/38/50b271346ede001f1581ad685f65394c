@@ -1,0 +1,12 @@
+package Jan29;
+
+import java.util.Scanner;
+
+public class LcmOfTwoNumber {
+	public static void main(String[] args) {
+		System.out.println("ENter two number to find Lcm Operations");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+	}
+
+}

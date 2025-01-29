@@ -1,0 +1,23 @@
+package Jan29;
+
+import java.util.Scanner;
+
+public class SumOfDigitSHouldbeinsingleDigit {
+	public static void main(String[] args) {
+		System.out.println("Enter a Number to calculate the sum of the digit should be in single digit");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();	
+		System.out.println("Sum of the digit should be in single digit is : "+ singleDigit(n));
+	}
+	static int singleDigit(int n) {
+		if(n>=0 && n<=9) {
+			return n;
+		}
+		return singleDigit(sum(n));
+	}
+	static int sum(int n) {
+		if(n==0)return 0;
+		return n%10+sum(n/10);
+	}
+
+}

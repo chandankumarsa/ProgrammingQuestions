@@ -1,0 +1,18 @@
+package Jan22;
+
+import java.util.Scanner;
+
+public class MulOfInteger {
+	public static void main(String[] args) {
+		System.out.println("Enter  a NUmber to Calculate MulOfInteger ");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+	}
+	static int mul(int n) {
+		if(n==0 || n==1) {
+			return 1;
+		}
+		return n*mul(n-1);
+	}
+
+}

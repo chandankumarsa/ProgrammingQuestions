@@ -1,0 +1,20 @@
+package Jan29;
+
+import java.util.Scanner;
+
+public class primeNumber {
+public static void main(String[] args) {
+	System.out.println("ENter a Number to check if a NUmber is a Prime or not");
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	System.out.println(isprime(n, n/2));
+}
+static boolean isprime(int n,int i) {
+	if(n<=1)return false;
+	if(i==1)return true;
+	if(n%i==0) {
+		return false;
+	}
+	return isprime(n, i-1);
+}
+}

@@ -1,0 +1,19 @@
+package Jan29;
+
+import java.util.Scanner;
+
+public class FibSeries1 {
+	public static void main(String[] args) {
+		System.out.println("ENter a Number to Print Fib Series");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		System.out.println("Fib Series in a Range is : ");
+		fib(0, 1, 1, n)
+	}
+	static void fib(int a,int b ,int count,int n) {
+		if(count>n)return ;
+		System.out.print( a +" ");
+		fib(b, a+b, count+1, n);
+	}
+
+}

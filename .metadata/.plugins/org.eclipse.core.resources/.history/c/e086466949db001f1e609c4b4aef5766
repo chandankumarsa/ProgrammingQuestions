@@ -1,0 +1,27 @@
+package Jan25;
+
+import java.util.Scanner;
+
+public class PrimeRange {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("ENter the start and end nUmber");
+		int  st= sc.nextInt();
+		int end = sc.nextInt();
+		range(st,end);
+	}
+	public static void range(int st,int end) {
+		if(st>end)return;
+		if(isPrime(st, st/2))System.out.println(st);
+		range(st+1, end);
+	}
+	static boolean isPrime(int n,int i) {
+		if(n<=1)return false;
+		if(i==1)return true;
+		if(n%i==0) {
+			return false;
+		}
+		return isPrime(n, i-1);
+	}
+
+}

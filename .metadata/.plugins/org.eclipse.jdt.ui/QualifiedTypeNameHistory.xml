@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.net.SecureCacheResponse"/>
+    <fullyQualifiedTypeName name="java.awt.Rectangle"/>
+    <fullyQualifiedTypeName name="Pattern.SavingAccount"/>
+    <fullyQualifiedTypeName name="Jan23.Rectangle"/>
+    <fullyQualifiedTypeName name="Jan23.Bookcreator"/>
+    <fullyQualifiedTypeName name="Jan26.PrimeNumber"/>
+    <fullyQualifiedTypeName name="Jan28.SumOfDigitSingleDigit"/>
+    <fullyQualifiedTypeName name="java.lang.classfile.instruction.ReturnInstruction"/>
+    <fullyQualifiedTypeName name="Jan25.fibone"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>

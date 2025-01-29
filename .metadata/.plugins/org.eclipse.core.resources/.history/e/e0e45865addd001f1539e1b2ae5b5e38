@@ -1,0 +1,13 @@
+package Jan29;
+
+import java.util.Scanner;
+
+public class Lcm {
+public static void main(String[] args) {
+	System.out.println("ENter two Number to perform the Hcf Operations");
+	Scanner sc = new Scanner(System.in);
+	int a = sc.nextInt();
+	int b = sc.nextInt();
+	
+}
+}

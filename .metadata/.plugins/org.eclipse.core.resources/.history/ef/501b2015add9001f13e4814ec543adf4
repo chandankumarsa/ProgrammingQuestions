@@ -1,0 +1,12 @@
+package Jan23;
+
+import java.util.Scanner;
+
+public class Hcf {
+	public static void main(String[] args) {
+		System.out.println("ENter two Number to find Hcf");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+	}
+
+}

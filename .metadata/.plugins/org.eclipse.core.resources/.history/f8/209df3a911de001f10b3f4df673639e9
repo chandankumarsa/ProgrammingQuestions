@@ -1,0 +1,20 @@
+package Jan29;
+
+import java.util.Scanner;
+
+public class ArmstrongNumber {
+public static void main(String[] args) {
+	System.out.println("ENter a Number to Print Armstrong Number");
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+}
+static int count(int n) {
+	if(n==0)return 0;
+	return 1+count(n/10);
+}
+static boolean isArmstrong(int n,int m,int sum,int original) {
+	if(n==0)return sum ==original;
+	sum+=(int)Math.pow(n/10, m);
+	return isArmstrong(n, m, sum, original);
+}
+}

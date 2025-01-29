@@ -1,0 +1,10 @@
+package Jan23;
+
+import java.util.Scanner;
+
+public class SumOfEvenOddPrintSeparately {
+public static void main(String[] args) {
+	Scanner sc = new SCanner(System.in);
+	int n = sc.nextInt();
+}
+}

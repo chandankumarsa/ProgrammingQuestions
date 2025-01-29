@@ -1,0 +1,12 @@
+package Jan22;
+
+import java.util.Scanner;
+
+public class HcfOfTwoNumber {
+	public static void main(String[] args) {
+		System.out.println("Enter Two NUmber to Find HCf");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+	}
+
+}

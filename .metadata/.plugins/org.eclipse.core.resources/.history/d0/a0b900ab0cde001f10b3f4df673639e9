@@ -1,0 +1,11 @@
+package Jan29;
+
+import java.util.Scanner;
+
+public class NthFib {
+	public static void main(String[] args) {
+		Scanner sc = new SCanner(System.in);
+		int n = sc.nextInt();
+	}
+
+}

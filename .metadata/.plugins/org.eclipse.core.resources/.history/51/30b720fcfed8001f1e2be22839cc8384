@@ -1,0 +1,35 @@
+package Jan22;
+
+import java.util.Scanner;
+
+public class SumOfEvenOdd {
+	public static void main(String[] args) {
+		System.out.println("ENter a number to Perform The sum of even and Odd");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		System.out.println("sum of Digit should be in single Digits is : ");
+		System.out.println("Sum of EVen number is : "+esum(n));
+		System.out.println("Sum of Odd Number is : "+osum(n));
+	}
+
+static int esum(int n) {
+	if(n==0) {
+		return 0;
+	}
+	int rem = n%10;
+	if(n%2==0) {
+		return rem +esum(n/10);
+	}
+	return esum(n/10);
+}
+static int osum(int n) {
+	if(n==0) {
+		return 0;
+	}
+	int rem = n%10;
+	if(n%2!=0) {
+		return rem +osum(n/10);
+	}
+	return osum(n/10);
+}
+}

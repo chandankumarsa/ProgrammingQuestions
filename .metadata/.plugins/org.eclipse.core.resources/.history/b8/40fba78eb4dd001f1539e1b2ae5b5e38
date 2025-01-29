@@ -1,0 +1,15 @@
+package Jan29;
+
+import java.util.Scanner;
+
+public class PFibSeries {
+	public static void main(String[] args) {
+		System.out.println("Enter the range to print Fib Seriesin a range");
+		Scanner sc = new Scanner(System.in);
+		int n= sc.nextInt();
+	}
+	static int fib(int a,int b,int count) {
+		if()
+	}
+
+}

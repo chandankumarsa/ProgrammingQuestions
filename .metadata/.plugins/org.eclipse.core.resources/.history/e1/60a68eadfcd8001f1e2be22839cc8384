@@ -1,0 +1,24 @@
+package Jan22;
+
+import java.util.Scanner;
+
+public class SumOFDIGITSIngle_Digit {
+	public static void main(String[] args) {
+		System.out.println("Enter a NUmber to Find Sum oF DIgit Single DIgit");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		System.out.println("Sum of Digit of a Given number is :"+findsum(n));
+	}
+	static int findsum(int n) {
+		if(n>0 && n>9) {
+			return n;
+		}
+		return findsum(n);
+	}
+	static int sum(int n) {
+		if(n==0) {
+			return 0;
+		}
+		return n%10+sum(n/10);
+	}
+}
