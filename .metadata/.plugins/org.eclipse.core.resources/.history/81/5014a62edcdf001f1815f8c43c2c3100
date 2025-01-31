@@ -1,0 +1,22 @@
+package Jan31;
+
+import java.util.Scanner;
+
+public class HappyNumber {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		System.out.println("ENter a Number to Check Happy Number");
+	}
+	static boolean isHappy(int n) {
+		if(n==1)return true;
+		if(n==4)return false;
+		return isHappy(sumOfSquare(n));
+	}
+	static int sumOfSquare(int n) {
+		if(n==0)return 0;
+		int rem = n%10;
+		return (rem*rem)+sumOfSquare(n/10);
+	}
+}

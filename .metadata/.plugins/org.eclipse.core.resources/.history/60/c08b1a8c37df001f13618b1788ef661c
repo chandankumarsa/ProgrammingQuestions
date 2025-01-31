@@ -1,0 +1,21 @@
+class A{
+	A(){
+		this(60);
+		System.out.println();
+}
+	A(int i){
+		System.out.println("A (int i) cons "+i);
+	}
+}
+class B extends A{
+	B(){
+		super(50);
+		System.out.println("B () cons");
+	}
+}
+public class Demo {
+	public static void main(String[] args) {
+		
+	}
+
+}

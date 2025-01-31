@@ -1,0 +1,26 @@
+package Jan29;
+class A {
+    A() {
+        System.out.println("A () cons");
+    }
+}
+
+class B extends A {
+    B() {
+        System.out.println("B () cons");
+    }
+}
+
+class C extends B {
+    C() {
+        System.out.println("C() cons");
+    }
+}
+
+public class Demo1 {
+    public static void main(String[] args) {
+        new A(); // Creates an instance of A
+        new B(); // Creates an instance of B (calls A first)
+        new C(); // Creates an instance of C (calls B first, which calls A)
+    }
+}

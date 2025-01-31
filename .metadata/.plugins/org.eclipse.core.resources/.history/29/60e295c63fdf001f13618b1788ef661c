@@ -1,0 +1,17 @@
+package Jan31;
+
+import java.util.Scanner;
+
+public class Lcm {
+	public static void main(String[] args) {
+		System.out.println("ENter Two Number to find Hcf");
+		Scanner sc = new Scanner(System.in);
+	}
+	static int lcm(int a,int b,int lcm) {
+		if(lcm%a==0 && lcm%b==0) {
+			return lcm;
+		}
+		return lcm(a, b, lcm);
+	}
+
+}

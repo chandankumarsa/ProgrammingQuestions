@@ -1,0 +1,17 @@
+package Jan31;
+
+import java.util.Scanner;
+
+public class print1ToNNumber {
+public static void main(String[] args) {
+	System.out.println("ENter a Number to print 1 to n number");
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	print(n, 0);
+}
+static void print(int n,int c) {
+	if(c>n)return;
+	System.out.print(c + " ");
+	print(n, c+1);
+}
+}

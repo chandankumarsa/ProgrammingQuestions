@@ -1,0 +1,23 @@
+package Jan31;
+
+import java.util.Scanner;
+
+public class HapyNumber {
+	public static void main(String[] args) {
+		System.out.println("ENter a Number to find the sum of the square");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		System.out.println(isHappy(n));
+	}
+	static boolean isHappy(int n) {
+		if(n==1)return true;
+		if(n==4)return false;
+		return isHappy(sumofSquare(n));
+	}
+	static int sumofSquare(int n) {
+		if(n==0)return 0;
+		int rem = n%10;
+		return (rem*rem)+sumofSquare(n/10);
+	}
+
+}

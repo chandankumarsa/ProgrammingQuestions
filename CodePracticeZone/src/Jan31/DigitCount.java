@@ -1,0 +1,16 @@
+package Jan31;
+
+import java.util.Scanner;
+
+public class DigitCount {
+public static void main(String[] args) {
+	System.out.println("ENter a Number to count Digit");
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	System.out.println(count(n));
+}
+static int count(int n) {
+	if(n==0)return 0;
+	return 1+count(n/10);
+}
+}

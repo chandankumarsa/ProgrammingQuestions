@@ -1,7 +1,5 @@
 package Jan27;
-
 import java.util.Scanner;
-
 public class SecoundHighestPrime {
 public static void main(String[] args) {
 	System.out.println("Enter the  start and End Range");

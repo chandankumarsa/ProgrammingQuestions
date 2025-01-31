@@ -1,0 +1,18 @@
+package Jan31;
+
+import java.util.Scanner;
+
+public class HCF {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("ENter two Number to perform the hcf operations");
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		System.out.println(hcf(a, b));
+	}
+	static int hcf(int a,int b) {
+		if(b==0)return a;
+		return hcf(b, a%b);
+	}
+
+}

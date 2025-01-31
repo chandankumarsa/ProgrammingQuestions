@@ -1,0 +1,18 @@
+package Jan31;
+
+import java.util.Scanner;
+
+public class Print1Ton {
+
+	public static void main(String[] args) {
+		System.out.println("Enter a Number to ptint 1 to n is : "+);
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		print(n, 1);
+	}
+	static void print(int n ,int c) {
+		if(c>n)return;
+		System.out.println(c);
+		print(n, c+1);
+	}
+}

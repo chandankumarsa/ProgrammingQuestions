@@ -1,0 +1,9 @@
+package Jan31;
+
+public class HappyNumber {
+
+	public static void main(String[] args) {
+		canner sc = new Scanner(System.in);
+		int n = sc.nextInt("ENter a Number to Check Happy Number");
+	}
+}

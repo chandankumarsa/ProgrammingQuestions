@@ -1,0 +1,11 @@
+package Jan31;
+
+import java.util.Scanner;
+
+public class AutomorphicNumber {
+public static void main(String[] args) {
+	System.out.println("Enter a Number to check Automorphi number or not");
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+}
+}

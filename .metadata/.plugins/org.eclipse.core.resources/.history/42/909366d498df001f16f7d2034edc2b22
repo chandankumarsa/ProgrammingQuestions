@@ -1,0 +1,11 @@
+package Jan31;
+
+import java.util.Scanner;
+
+public class ReverseNumber {
+public static void main(String[] args) {
+	System.out.println("ENter a Number to reverse a anumber");
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+}
+}

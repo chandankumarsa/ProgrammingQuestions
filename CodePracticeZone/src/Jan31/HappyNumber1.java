@@ -1,0 +1,22 @@
+package Jan31;
+
+import java.util.Scanner;
+
+public class HappyNumber1 {
+public static void main(String[] args) {
+	System.out.println("Enter a Number To Check Happy Number ");
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	System.out.println(isHappy(n));
+}
+static boolean isHappy(int n) {
+	if(n==1)return true;
+	if(n==4)return false;
+	return isHappy(squareNumber(n));
+}
+static int squareNumber(int n) {
+	if(n==0)return 0;
+	int rem = n%10;
+	return (rem*rem)+squareNumber(n/10);
+}
+}

@@ -1,0 +1,15 @@
+package Feb1;
+
+import java.util.Scanner;
+
+public class SecoundHeighestPrime {
+
+	public static void main(String[] args) {
+		Sysout("Enter a Number to print Prime NUmber in a Range");
+		Scanner sc = new Scanner(System.in);
+		int st = sc.nextInt();
+		int end =sc.nextInt();
+
+	range(st,end);
+	}
+}

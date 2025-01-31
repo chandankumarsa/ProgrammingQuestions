@@ -1,0 +1,12 @@
+package Jan27;
+
+import java.util.Scanner;
+
+public class Feb1 {
+public static void main(String[] args) {
+	System.out.println("ENter the start range and end range");
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	
+}
+}

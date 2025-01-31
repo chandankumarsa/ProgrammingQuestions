@@ -1,0 +1,22 @@
+package Jan31;
+
+import java.util.Scanner;
+
+public class SumofDigitShouldSingleDigit {
+public static void main(String[] args) {
+	System.out.println("Enter a number to calculate SumofDigitShouldSingleDigit");
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	System.out.println(singleDigit(n));
+}
+static int singleDigit(int n) {
+	if(n<=0 || n<=9) {
+		return n;
+	}
+	return singleDigit(sum(n));
+}
+static int sum(int n) {
+	if(n==0)return 0;
+	return n%10+sum(n/10);
+}
+}
