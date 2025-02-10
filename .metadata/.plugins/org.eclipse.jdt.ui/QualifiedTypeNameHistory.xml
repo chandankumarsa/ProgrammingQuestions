@@ -11,6 +11,22 @@
     <fullyQualifiedTypeName name="Jan25.fibone"/>
     <fullyQualifiedTypeName name="Jan31.Print1ton"/>
     <fullyQualifiedTypeName name="java.sql.SQLClientInfoException"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.DoubleSummaryStatistics"/>
+    <fullyQualifiedTypeName name="Feb2.PerfectNumber"/>
+    <fullyQualifiedTypeName name="java.awt.font.NumericShaper.Range"/>
+    <fullyQualifiedTypeName name="Jan29.Factorial"/>
+    <fullyQualifiedTypeName name="java.lang.Readable"/>
+    <fullyQualifiedTypeName name="org.w3c.dom.css.Rect"/>
+    <fullyQualifiedTypeName name="I_CopyConstructor.Rectangle"/>
+    <fullyQualifiedTypeName name="J_FactoryMethod.Book"/>
+    <fullyQualifiedTypeName name="J_FactoryMethod.BookCreator"/>
+    <fullyQualifiedTypeName name="java.lang.Package"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="M_MethodOverriding.Smart5g_Phone"/>
+    <fullyQualifiedTypeName name="M_MethodOverriding.SmartPhone"/>
+    <fullyQualifiedTypeName name="Feb4.Hcf"/>
+    <fullyQualifiedTypeName name="Jan31.DigitCount"/>
+    <fullyQualifiedTypeName name="Recurssion10.SumOfEvenOddPrint"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>

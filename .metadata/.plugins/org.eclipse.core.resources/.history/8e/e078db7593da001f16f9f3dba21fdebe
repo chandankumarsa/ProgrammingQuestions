@@ -1,9 +1,0 @@
-package Jan25;
-
-import java.util.Scanner;
-
-public class Fib {
-	public static void main(String[] args) {
-		System.out.println("ENter the ranges");
-		Scanner sc = new Scanner(System.in);
-}

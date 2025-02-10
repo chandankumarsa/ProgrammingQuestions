@@ -1,7 +1,0 @@
-package Jan26;
-
-public class DigitCount {
-public static void main(String[] args) {
-	
-}
-}

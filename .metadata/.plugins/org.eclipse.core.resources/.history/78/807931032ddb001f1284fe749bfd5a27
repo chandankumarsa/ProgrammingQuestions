@@ -1,7 +1,0 @@
-package Jan26;
-
-public class SumOfDigitShouldSingleDigit {
-public static void main(String[] args) {
-	
-}
-}
