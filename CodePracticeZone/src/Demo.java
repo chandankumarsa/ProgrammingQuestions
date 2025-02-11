@@ -1,37 +1,45 @@
-class A{
-	A(){
-		this(60);
-		System.out.println("A() cons");
-}
-	A(int i){
-		System.out.println("A (int i) cons "+i);
-	}
-}
-class B extends A{
-	B(){
-		super(50);
-		System.out.println("B () cons");
-	}
-	B(int i){
-		this();
-		System.out.println("B (int i)cons : "+i);
-	}
-}
-class C extends B{
-	C(){
-		this(10);
-		System.out.println("c() cons");
-	}
+class Employee {
+    String name;
+    int age;
+    int id;
+    long mobile;
 
- C(int i) {
-		super(i);
-		System.out.println("c (int i) cons: "+i);
-	}
+    public Employee() {
+    }
+
+    public Employee(String name, int age, int id, long mobile) {
+        this.name = name;
+        this.age = age;
+        this.id = id;
+        this.mobile = mobile;
+    }
+
+    // toString method implementation
+    @Override
+    public String toString() {
+        return name + " ," + age + "," + id + "," + mobile; // "," is for better readability
+    }
+
+    // equals Implementation
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true; // If both references are the same, return true
+        if (o == null || getClass() != o.getClass()) return false; // Check for null and class type
+        Employee c = (Employee) o;
+        return this.age == c.age && this.id == c.id && this.mobile == c.mobile && this.name.equals(c.name);
+    }
 }
+
 public class Demo {
-	public static void main(String[] args) {
-		new C();
-	}
-
+    public static void main(String[] args) {
+        Employee e = new Employee("chandan", 20, 1, 784);
+        System.out.println(e);
+        Employee e1 = new Employee("Animesh", 21, 2, 7846664);
+        System.out.println(e1);
+        System.out.println("===========");
+        Employee c = new Employee("chiku", 20, 1, 784);
+        Employee c1 = new Employee("chiku", 20, 1, 784);
+        System.out.println(c == c1); // false (different objects)
+        System.out.println(c.equals(c1)); // true (same content)
+    }
 }
-
