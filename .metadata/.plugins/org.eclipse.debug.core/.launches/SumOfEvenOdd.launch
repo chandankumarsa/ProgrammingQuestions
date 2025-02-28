@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-        <listEntry value="/CodePracticeZone/src/Feb6/SumofEvenOdd.java"/>
+        <listEntry value="/ARRAY_PROGRAM/src/ArrayPractice/SumofEVenOdd.java"/>
     </listAttribute>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
         <listEntry value="1"/>
     </listAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="Feb6.SumofEvenOdd"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="ArrayPractice.SumofEVenOdd"/>
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value=""/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="CodePracticeZone"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="ARRAY_PROGRAM"/>
 </launchConfiguration>
