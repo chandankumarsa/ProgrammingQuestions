@@ -1,0 +1,929 @@
+WRITE A JAVA PROGRAM TO PRINT UNIQUE CHARACTER IN A GIVEN STRING
+INPUT:java
+OUTPUT:jv
+
+public class Uniquecharacterprint {
+public static void main(String[] args) {
+	System.out.println("Enter a String to print unique character");
+	Scanner sc = new Scanner(System.in);
+	String s = sc.nextLine();
+	for(int i =0;i<s.length();i++) {
+		boolean isUnique=true;
+		char ch =s.charAt(i);
+		for(int j =0;j<s.length();j++) {
+			if(i!=j&&s.charAt(j)==ch) {
+				isUnique=false;
+				break;
+			}
+		}
+		if(isUnique)System.out.print(ch);
+	}
+}
+}
+------------------------------------------------------------------
+WRITE A JAVA PROGRAM TO REPLACE CONSICUTIVE CHARACTER WITH DOLLAR
+case 1:
+INPUT:boss
+OUTPUT:bos$
+case-2:
+INPUT:Bossss
+OUTPUT:Bos$s$
+
+(Doubt)
+---------------------------------------------------------------
+REMOVE THE EXTRA SPACE FROM THE GIVEN STRING
+------------------------------------------------------------------
+WRITE A JAVA PROGRAM  FOR STRING INITCAP
+INPUT:ramana kumar
+OUTPUT:Ramana Kumar
+-----------------------------------------------
+public class InitCap {
+    public static void main(String[] args) {
+        String s = "ramana kumar";
+        char ch[] = s.toCharArray();
+
+        for (int i = 0; i < ch.length; i++) {
+            if (i == 0 || ch[i - 1] == ' ') {
+                if (ch[i] >= 'a' && ch[i] <= 'z') {
+                    ch[i] -= 32; // Convert to uppercase
+                }
+            }
+        }
+        System.out.println(new String(ch));
+    }
+}
+
+----------------------------------------------------
+WRITE A JAVA PROGRAM TO PRINT OCCURANCE OF EACH CHARACTER IN A GIVEN STRING ?
+INPUT:Java is very easy
+OUTPUT:
+J = 1
+a = 3
+v = 2
+  = 3//SPACE
+i = 1
+s = 2
+e = 2
+r = 1
+y = 2
+
+
+public class OccurrenceOfEachCharacter {
+    public static void main(String[] args) {
+        String s = "Java is very easy";
+        char[] ch = s.toCharArray();
+
+        for (int i = 0; i < ch.length; i++) {
+            if (ch[i] == '\u0000')  
+                continue;
+
+            int count = 1; // Initialize with 1 to count the first occurrence
+            for (int j = i + 1; j < ch.length; j++) {
+                if (ch[i] == ch[j]) {
+                    count++;
+                    ch[j] = '\u0000';  // Mark counted character
+                }
+            }
+            System.out.println(ch[i] + " = " + count);
+        }
+    }
+}
+
+---------------------------------------------------------------------
+Q-Write a Java program to find the maximum occurred character in a given string.
+INPUT:jaaaaaavva
+OUTPUT:a=6
+
+import java.util.Scanner;
+
+public class MaxOccurredChar {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();     
+        char maxChar = s.charAt(0);
+        int maxCount = 0;
+        
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            int count = 0;
+            for (int j = 0; j < s.length(); j++) {
+                if (s.charAt(j) == ch) {
+                    count++;
+                }
+            }
+            
+            if (count > maxCount) {
+                maxCount = count;
+                maxChar = ch;
+            }
+        }
+        
+        System.out.println(maxChar + "=" + maxCount);
+    }
+}
+
+--------------------------------------------------------------------
+WRITE A JAVA PROGRAM TO PRINT MINIMUM OCCURED CHARACTER COUNT IN A GIVEN STRING
+
+INPUT:jaaaavvvaaa
+OUTPUT:J=1
+
+
+import java.util.Scanner;
+
+public class MinOccurredChar {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();
+        char minChar = s.charAt(0);
+        int minCount = s.length();
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            int count = 0;
+            for (int j = 0; j < s.length(); j++) {
+                if (s.charAt(j) == ch) {
+                    count++;
+                }
+            }
+            if (count < minCount) {
+                minCount = count;
+                minChar = ch;
+            }
+        }
+        
+        System.out.println(minChar + "=" + minCount);
+    }
+}
+
+-------------------------------------------------------------
+Q: Write a Java program to print the second most occurred character count in a given string.
+Input: jaaavvvaa
+Output: v=3
+
+
+import java.util.Scanner;
+
+public class SecondMaxOccurredChar {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();
+        sc.close();
+        
+        char maxChar = '\0', secondMaxChar = '\0';
+        int maxCount = 0, secondMaxCount = 0;
+        
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            int count = 0;
+            
+            for (int j = 0; j < s.length(); j++) {
+                if (s.charAt(j) == ch) {
+                    count++;
+                }
+            }
+            
+            if (count > maxCount) {
+                secondMaxCount = maxCount;
+                secondMaxChar = maxChar;
+                maxCount = count;
+                maxChar = ch;
+            } else if (count > secondMaxCount && ch != maxChar) {
+                secondMaxCount = count;
+                secondMaxChar = ch;
+            }
+        }
+        
+        System.out.println(secondMaxChar + "=" + secondMaxCount);
+    }
+}
+
+----------------------------------------------------------------------
+Q- Write a Java program to arrange all characters of a string in ascending order.
+Input:jaaaaaavva
+Output:aaaaaaajvv
+
+public class ArrangeCharacterAscendingOrder {
+    public static void main(String[] args) {
+        String s = "jaaaaaavva";
+        char[] ch = s.toCharArray();
+
+        // Bubble Sort
+        for (int i = 0; i < ch.length - 1; i++) {
+            for (int j = 0; j < ch.length - i - 1; j++) {
+                if (ch[j] > ch[j + 1]) {
+                    char temp = ch[j];
+                    ch[j] = ch[j + 1];
+                    ch[j + 1] = temp;
+                }
+            }
+        }
+
+        System.out.println(new String(ch)); // Convert char array to String
+    }
+}
+
+--------------------------------------------------------------------------------
+Q-Write a Java program to print the occurrence of repeated characters.
+Input:Hello World
+Output:He121 w2r3d
+
+public class RepeatedCharOccurrence {
+    public static void main(String[] args) {
+    	String s ="Hello World";
+    	char []ch=s.toCharArray();
+    	for(int i=0;i<ch.length;i++) {
+    		if(ch[i]>='0'&&ch[i]<='9')continue;
+    		char count='1';
+    		for(int j =i+1;j<ch.length;j++) {
+    			if(ch[i]==ch[j]) {
+    				count++;
+    				ch[j]=count;
+    			}
+    		}
+    		if(count!='1')
+    			ch[i]='1';
+    	}
+    	System.out.println(ch);
+    }
+}
+
+--------------------------------------------------------------------
+INPUT:2a3b1C
+OUTPUT:aabbbc
+
+public class Main {
+    public static void main(String[] args) {
+        String input = "2a3b1C";
+        String output = "";
+        
+        for (int i = 0; i < input.length(); i += 2) {
+            int count = input.charAt(i) - '0';  // Convert the number character to an integer
+            char character = input.charAt(i + 1);  // Get the character
+            
+            // Append the character 'count' times to the output string
+            for (int j = 0; j < count; j++) {
+                output += character;
+            }
+        }
+        
+        System.out.println(output);
+    }
+}
+
+-------------------------------------------------------------
+INPUT:aabccadd
+OUTPUT:2a1b2c1a2d
+
+public class Main {
+    public static void main(String[] args) {
+        String input = "aabccadd";
+        String output = "";
+        
+        // Iterate through the input string
+        for (int i = 0; i < input.length(); i++) {
+            char character = input.charAt(i);
+            int count = 1;
+            
+            // Count consecutive occurrences of the character
+            while (i + 1 < input.length() && input.charAt(i + 1) == character) {
+                count++;
+                i++;
+            }
+            
+            // Concatenate the count and character to the output
+            output = output + count + character;
+        }
+        
+        System.out.println(output);
+    }
+}
+
+----------------------------------------------------------------------------------
+write a java program to Replace oval with underscore if oval count is greater then 3
+INPUT:kukka pilla
+output:k_kk_ p_ll_
+-------------------------------------------------------------------------------------------
+WRITE A JAVA PROGRAM TO PRINT PALINDROME WORDS IN A GIVEN STRING
+INPUT:madam sir madam anthe
+OUTPUT:
+madam
+madam
+
+import java.util.Scanner;
+public class PalindromeWords {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a String");
+        String s = sc.nextLine();
+        sc.close();
+
+        String words[] = s.split(" ");
+        
+        for (int i = 0; i < words.length; i++) {
+            if (isPalindrome(words[i])) {
+                System.out.println(words[i]);
+            }
+        }
+    }
+    static boolean isPalindrome(String str) {
+        int left = 0, right = str.length() - 1;
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+}
+
+--------------------------------------------------------------
+WRITE JAVA PROGRAM TO REMOVE DUPLICATE WORDS IN A GIVEN STRINGS
+INPUT:bengalore is a bengalore city
+OUTPUT:bengalore is a city
+
+
+public class RemoveDuplicateWords {
+    public static void main(String[] args) {
+        String s = "Bengalore is a Bengalore city";
+        System.out.println(removeDup(s));
+    }
+
+    static String removeDup(String s) {
+        String res = "";
+        String[] str = s.split(" ");
+
+        for (int i = 0; i < str.length; i++) {
+            if (str[i].equals(" ")) continue;
+            
+            // Check for duplicates
+            for (int j = i + 1; j < str.length; j++) {
+                if (str[i].equals(str[j])) {
+                    str[j] = " "; // Mark duplicates
+                }
+            }
+                res += str[i];
+                res+=" ";
+            }
+        
+
+        return res.trim(); // Remove trailing space
+    }
+}
+
+---------------------------------------------------------
+WRITE A JAVA PROGRAM TO PRINT OCCURANCE OF EACH WORD IN A GIVEN STRING
+INPUT:java is very very easy easy java
+OUTPUT:java=2
+is=1
+very=2
+easy=2
+
+public class WordOccurrence {
+    public static void main(String[] args) {
+        String s = "java is very very easy easy java";
+        printWordCount(s);
+    }
+
+    static void printWordCount(String s) {
+        String[] words = s.split("\\s+"); // Splitting by spaces
+        boolean[] counted = new boolean[words.length]; // To track counted words
+
+        for (int i = 0; i < words.length; i++) {
+            if (counted[i]) continue; // Skip already counted words
+
+            int count = 1; // Initialize count
+            for (int j = i + 1; j < words.length; j++) {
+                if (words[i].equals(words[j])) {
+                    count++;
+                    counted[j] = true; // Mark duplicate words
+                }
+            }
+            System.out.println(words[i] + "=" + count);
+        }
+    }
+}
+
+-------------------------------------------------------------
+print all Possible SubString
+INPUT:malayalam
+OUTPUT:mal
+mala
+malay
+malaya
+malayal
+malayala
+malayalam
+ala
+alay
+alaya
+alayal
+alayala
+alayalam
+lay
+laya
+layal
+layala
+layalam
+aya
+ayal
+ayala
+ayalam
+yal
+yala
+yalam
+ala
+alam
+lam
+
+
+
+public class PrintAllPossibleSubstring {
+    public static void main(String[] args) {
+        String s = "malayalam";
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = i + 3; j <= s.length(); j++) {
+                System.out.println(s.substring(i, j));
+            }
+        }
+    }
+}
+
+
+------------------------------------------------------------
+WRITE A JAVA PROGRAM TO PRINT SUBSTRING PALINDROME IN A GIVEN STRING
+INPUT:malayalam
+OUTPUT:malayalam
+ala
+alayala
+layal
+aya
+ala
+
+
+public class SubStringPalindrome {
+public static void main(String[] args) {
+	String s ="malayalam";
+	for(int i =0;i<s.length();i++) {
+		for(int j =i+3;j<=s.length();j++) {
+			String str =s.substring(i,j);
+			if(isPalindrome(str))System.out.println(str);
+		}
+	}
+}
+public static boolean isPalindrome(String s) {
+	int i =0;
+	int j =s.length()-1;
+	while(i<j) {
+		if(s.charAt(i)!=s.charAt(j))return false;
+		i++;
+		j--;
+	}
+	return true;
+}
+}
+
+-------------------------------------------------------------------
+WRITE A JAVA PROGRAM TO PRINT BIGGEST SUBSTRING PALINDROME IN A GIVEN SUBSTRING(wrong getting some mistake)
+INPUT:malayalam
+OUTPUT:alayala
+
+package Class17_02_2025;
+public class PrintBiggestSubStringPalindrome {
+    public static void main(String[] args) {
+        String s = "malayalam";
+        String bigsubpalindrome = "";
+
+        // Loop through the string
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = i + 1; j <= s.length(); j++) {
+                String str = s.substring(i, j);
+                if (isPalindrome(str)) {
+                    System.out.println(str);
+                    if(str.length()>=bigsubpalindrome.length()) {
+                    	bigsubpalindrome=str;
+                    }
+                }
+            }
+        }
+
+        System.out.println(bigsubpalindrome);
+    }
+    static boolean isPalindrome(String str) {
+        int left = 0, right = str.length() - 1;
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+}
+
+-----------------------------------------------------------------------
+WRITE A JAVA PROGRAM TO PRINT THE SMALLEST SUBSTRING PALINDROME IN A GIVEN STRING
+INPUT:malayalam
+OUTPUT:ala
+
+package Class17_02_2025;
+public class Main {
+    public static void main(String[] args) {
+        String str = "malayalam";
+        String smallestPalindrome = str;
+
+        // Loop through the string
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = i + 1; j <= str.length(); j++) {
+                String substring = str.substring(i, j);
+                if (isPalindrome(substring) && substring.length() < smallestPalindrome.length() && substring.length() > 1) {
+                    smallestPalindrome = substring;
+                }
+            }
+        }
+
+        System.out.println(smallestPalindrome);
+    }
+
+    // Function to check if a string is a palindrome
+    public static boolean isPalindrome(String str) {
+        int left = 0;
+        int right = str.length() - 1;
+
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+}
+
+---------------------------------------------------------------
+write a java program to swap twoString variable without using the thired variable
+HINTS:use Substring method
+INPUT:str1 = "hello"
+str2 = "world"
+
+OUTPUT:After swap:
+str1 = world
+str2 = hello
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        String str1 = "hello";
+        String str2 = "world";
+
+        // Swapping strings without using a third variable
+        str1 = str1 + str2;  // Concatenate both strings
+        str2 = str1.substring(0, str1.length() - str2.length()); // Extract the original str1
+        str1 = str1.substring(str2.length()); // Extract the original str2
+
+        System.out.println("After swap:");
+        System.out.println("str1 = " + str1);
+        System.out.println("str2 = " + str2);
+    }
+}
+
+
+-----------------------------------------------------------------
+WRITE A JAVA PROGRAM TO PRINT OCCURANCE OF EACH CHARACTER USING REPLACE METHOD
+INPUT:javadev
+OUTPUT:
+j=1
+a=2
+v=2
+d=1
+e=1
+
+
+public class OccuranceOfEachCharacter {
+public static void main(String[] args) {
+	String s1 = "javadev";
+	while(s1.length()!=0) {
+		char ch=s1.charAt(0);
+		String s2=s1.replace(ch+"","");
+		int count=s1.length()-s2.length();
+		System.out.println(ch+"="+count);
+		s1=s2;
+	}
+}
+}
+
+-------------------------------------------------
+WRITE A JAVA PROGRAM TO PRINT THE MAXIMUM CHARACTER OF A GIVEN STRING
+INPUT:javvvaadev
+OUTPUT:v = 4
+
+public class OccuranceOfEach {
+    public static void main(String[] args) {
+        String s1 = "javvvaadev";
+        int max = 0;
+        char maxChar = ' ';
+
+        while (s1.length() != 0) {
+            char ch = s1.charAt(0);
+            String s2 = s1.replace(ch + "", "");
+            int count = s1.length() - s2.length();
+            if (count > max) {
+                max = count;
+                maxChar = ch;
+            }
+            s1 = s2;
+        }
+        System.out.println(maxChar + " = " + max);
+    }
+}
+
+------------------------------------------------------
+WRITE A JAVA PROGRAM TO PRINT THE SECOUND MAXIMUM CHARACTER IN A GIVEN STRING
+INPUT:javvvaadev
+OUTPUT:
+Max: v = 4
+Second Max: a = 3
+
+public class SecondMaxOccurrence {
+    public static void main(String[] args) {
+        String s1 = "javvvaadev";
+        int max = 0, secondMax = 0;
+        char maxChar = ' ', secondMaxChar = ' ';
+
+        while (s1.length() != 0) {
+            char ch = s1.charAt(0);
+            String s2 = s1.replace(ch + "", "");
+            int count = s1.length() - s2.length();
+
+            if (count > max) {
+                secondMax = max;
+                secondMaxChar = maxChar;
+                max = count;
+                maxChar = ch;
+            } else if (count > secondMax) {
+                secondMax = count;
+                secondMaxChar = ch;
+            }
+            s1 = s2;
+        }
+        
+        System.out.println("Max: " + maxChar + " = " + max);
+        System.out.println("Second Max: " + secondMaxChar + " = " + secondMax);
+    }
+}
+ 
+---------------------------------------------------------------------
+CHECK THE GIVEN STRING IS ANAGRAM OR NOT
+INPUT:listen,silent
+OUTPUT:true
+import java.util.Arrays;
+public class Anagram {
+    public static void main(String[] args) {
+        System.out.println(isAnagram("listen", "silent"));
+    }    
+    static boolean isAnagram(String s1, String s2) {
+        if (s1.length() != s2.length()) {
+            return false;
+        }
+        // Convert strings to character arrays and sort them
+        char[] arr1 = s1.toCharArray();
+        char[] arr2 = s2.toCharArray();
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+        // Compare the sorted arrays
+        return Arrays.equals(arr1, arr2);
+    }
+}
+
+------------------------------------------------------------------------------------------
+REMOVING THE DUPLICATE CHARACTER IN A GIVEN STRING (USING THE INBUILT FUNCTIONS)
+INPUT:javadev
+OUTPUT:javde
+
+public class RemoveDuplicateCharacterString {
+public static void main(String[] args) {
+	String s1 ="javadev";
+	String s2="";
+	for(int i =0;i<s1.length();i++) {
+		char ch =s1.charAt(i);
+		if(!s2.contains(ch+""))
+		s2+=ch;
+	}
+	System.out.println(s2);
+}
+}
+------------------------------------------------------------
+String permutation program:
+INPUT:abc
+OUTPUT:
+abc
+acb
+bac
+bca
+cba
+cab
+
+public class Permutations {
+public static void main(String[] args) {
+	String s ="abc";
+	isPermutation(s, 0, s.length());
+}
+public static void isPermutation(String s,int st,int end) {
+	if(st==end) {
+		System.out.println(s);
+		return;
+	}
+	for(int i =st;i<end;i++) {
+		String s1 =swap(s,st,i);
+		isPermutation(s1, st+1, end);
+	}
+}
+public static String swap(String s,int i,int j) {
+	char[] ch =s.toCharArray();
+	char temp =ch[i];
+	ch[i]=ch[j];
+	ch[j]=temp;
+	return new String(ch);
+	
+}
+}
+-------------------------------------------------------------------
+WRITE A JAVA PROGRAM TO PRINT CHARACTER INDEX VALUES
+INPUT:banana
+OUTPUT:b=0
+a=1,3,5
+n=2,4
+
+
+public class CharIndex {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();
+        sc.close();
+        
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (s.indexOf(c) == i) { // Ensures each character is processed only once
+                System.out.print(c + "=" + i);
+                for (int j = i + 1; j < s.length(); j++) {
+                    if (s.charAt(j) == c) {
+                        System.out.print("," + j);
+                    }
+                }
+                System.out.println();
+            }
+        }
+    }
+}
+----------------------------------------------------------------------
+WRITE A JAVA PROGRAM TO CHECK GIVEN STRING IS PANAGRAM OR NOT
+INPUT:a quick brown fox jumps over the lazy dog
+OUTPUT: true
+
+public class Panagram {
+	public static void main(String[] args) {
+		String s = "a quick brown fox jumps over the lazy dog";
+		System.out.println(isPanagram(s));
+	}
+
+	public static boolean isPanagram(String s) {
+		if (s.length() < 26)
+			return false;
+		s = s.toLowerCase();
+		for (char ch = 'a'; ch <= 'z'; ch++) {
+			if (!s.contains(ch + ""))
+				return false;
+		}
+		return true;
+	}
+}
+
+--------------------------------------------------------------------
+WRITE A JAVA PROGRAM TO PRINT THE MISSING VOWELS IN A GIVEN STRING
+INPUT:india
+output:eouaeou
+
+public class MissingVowels {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next().toLowerCase();
+        sc.close();
+        
+        String vowels = "aeiou";
+        for (char v : vowels.toCharArray()) {
+            if (!s.contains(String.valueOf(v))) {
+                System.out.print(v);
+            }
+        }
+    }
+}
+
+-------------------------------------------------------------------
+WRITE A JAVA PROGRAM FOR STRING ENCRYPTION AND DECRYPTION
+WRITE ENCODE AND DECODE BOTH
+ENCODE->2
+INPUT:abc
+OUTPUT:cde
+
+DECODE:->2
+INPUT:xyz
+OUTPUT:vwx
+
+public class EncryptionDecryption {
+public static void main(String[] args) {
+System.out.println(encode("I Love You", 2));
+System.out.println(decode("K Nqxg Aqw", 2));
+}
+static String encode(String s,int n) {
+	char[]ch = s.toCharArray();
+	for(int i =0;i<s.length();i++) {
+		if(Character.isUpperCase(ch[i]))
+		ch[i]=((char)(((((ch[i]-'A'+n)%26)+26)%26)+'A'));
+		else if(Character.isLowerCase(ch[i])) {
+			ch[i]=((char)(((((ch[i]-'a'+n)%26)+26)%26)+'a'));
+		}
+	}
+	return new String(ch);
+	
+}
+public static String decode(String s,int n) {
+	return encode(s, -n);
+}
+}
+-----------------------------------------------------------
+WRITE A JAVA PROGRAM TO FIND A STRING LENGTH WITHOUT USING LENGTH METHOD
+INPUT:hello
+OUTPUT:Length of the string: 5
+
+
+public class StringLengthWithoutMethod {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String s = sc.next();
+        sc.close();
+        
+        int length = 0;
+        for (char c : s.toCharArray()) {
+            length++;
+        }
+        
+        System.out.println("Length of the string: " + length);
+    }
+} 
+
+----------------------------------------------------------------
+SWAP THE CHARACTER BASED ON THE INDEX VALUES 
+INPUT:abcd
+key=2
+OUTPUT:adcbe
+
+public class SwapCharacters {
+    public static void main(String[] args) {
+        String input = "abcd";
+        int key = 2;
+
+        // Convert the string to a character array for easy swapping
+        char[] chars = input.toCharArray();
+
+        // Swap characters at the given index and key
+        char temp = chars[key];
+        chars[key] = chars[key + 1];
+        chars[key + 1] = temp;
+
+        // Convert the character array back to a string and print the result
+        String output = new String(chars);
+        System.out.println(output);
+    }
+}
+----------------------------------------------------------------
+WRITE THE JAVA PROGRAM TO PRINT THE MISSING NUMBER IN A GIVEN STRING[CONDITION (0-9)]
+INPUT:"a5bcd3e1"
+OUTPUT:"0246789"
+
+public class MissingNumbers {
+    public static void main(String[] args) {
+        String input = "a5bcd3e1";
+        
+        // Create a string containing all digits
+        String allDigits = "0123456789";
+        
+        // Initialize the result as an empty string
+        String missingNumbers = "";
+        
+        // Iterate over all digits and check if they're missing in the input string
+        for (char digit : allDigits.toCharArray()) {
+            if (!input.contains(String.valueOf(digit))) {
+                missingNumbers += digit;  // Concatenate missing digits
+            }
+        }
+        
+        // Print the missing numbers
+        System.out.println(missingNumbers);
+    }
+}
+----------------------------------------------------

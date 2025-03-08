@@ -1,0 +1,316 @@
+Sum of Two  Array ?
+import java.util.Arrays;
+public class SumOftwoArray {
+	public static void main(String[] args) {
+		int[][] a = { { 1, 2, 3 }, { 1, 4, 5 }, { 6, 5, 4 } };
+		int[][] b = { { 1, 1, 1 }, { 1, 1, 1 }, { 1, 1, 1 } };
+		int[][] c = new int[a.length][a.length]; // Use a[0].length instead of a.length
+
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; j < a[i].length; j++) {
+				c[i][j] = a[i][j] + b[i][j];
+			}
+		}
+
+		// Print the final matrix
+		for (int[] n : c)
+			System.out.println(Arrays.toString(n));
+	}
+}
+-----------------------------------------------------------------
+Write a java program to take user input element from scanner class 2-D Array
+
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class TakeUserinputElement {
+public static void main(String[] args) {
+	Scanner sc= new Scanner(System.in);
+	System.out.println("ENter The row Size");
+	int row =sc.nextInt();
+	System.out.println("Enter the column size");
+	int col = sc.nextInt();
+	int a[][]=new int [row][col];
+	System.out.println("Enter the element");
+	for(int i =0;i<a.length;i++) {
+		for(int j =0;j<a[i].length;j++) {
+			a[i][j]=sc.nextInt();
+		}
+	}
+	for(int n[]:a) {
+		System.out.print(Arrays.toString(n)+"\n");
+	}
+	
+	
+}
+}
+
+-------------------------------------------------------------------------------
+Write a java program to find Maximum Element in 2D Array ?
+
+public class FindMaxElementArray {
+public static void main(String[] args) {
+	int a[][]= {{7,10,20},{5,6,8},{2,4,7}};
+	int max =a[0][0];
+	for(int i =0;i<a.length;i++) {
+		for(int j =0;j<a[i].length;j++) {
+			if(a[i][j]>max) {
+				max=a[i][j];
+			}
+		}
+		
+	}
+	System.out.println(max);
+}
+}
+
+
+
+----------------------------------------------------------------------------------
+Write a java program to find Minimum Element in 2D Array ?
+
+public class FindMinElement {
+	public static void main(String[] args) {
+		int a[][]= {{7,10,20},{5,6,8},{2,4,7}};
+		int min =a[0][0];
+		for(int i =0;i<a.length;i++) {
+			for(int j =0;j<a[i].length;j++) {
+				if(a[i][j]<min) {
+					min=a[i][j];
+				}
+			}
+			
+		}
+		System.out.println(min);
+	}
+	}
+
+
+----------------------------------------------------------------------------------
+Write a java Program to Find the Prime Number in Given 2D Array ?
+
+public class FIND_PRIMEnUMBER {
+    public static void main(String[] args) {
+        int[][] a = {
+            {7, 10, 20},
+            {5, 6, 8},
+            {2, 4, 7}
+        };
+
+        System.out.println("Prime numbers in the given 2D array:");
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[i].length; j++) {
+                if (isPrime(a[i][j])) {
+                    System.out.println(a[i][j] );
+                }
+            }
+        }
+    }
+
+    static boolean isPrime(int n) {
+        if (n <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= n / 2; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+
+-----------------------------------------------------------------------------------
+Write a java program to find Primary Diagonal sum in 2D Array ?
+
+
+public class PrimeryDiagonal {
+public static void main(String[] args) {
+	int a[][]= {{1,2,3},{4,5,6},{7,8,9}};
+	int sum =0;
+	for(int i =0;i<a.length;i++) {
+		for(int j =0;j<a[i].length;j++) {
+			if(i==j)sum+=a[i][j];
+		}
+	}
+	System.out.println(sum);
+}
+
+}
+
+------------------------------------------------------------------------------------
+Write a java program to find Secoundary Diagonal sum in 2D Array ?
+
+public class SecoundryDiagonal {
+public static void main(String[] args) {
+	int a[][]= {{1,2,3},{4,5,6},{7,8,9}};
+	int sum =0;
+	for(int i =0;i<a.length;i++) {
+		for(int j =0;j<a[i].length;j++) {
+			if(i+j==a.length-1)sum+=a[i][j];
+		}
+	}
+	System.out.println(sum);
+}
+}
+
+------------------------------------------------------------------------------------
+Write a java program to Create Transpose Matrix in 2D Array ?
+
+public class TransposeMatrix {
+    public static void main(String[] args) {
+        int a[][] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        int b[][] = new int[a[0].length][a.length]; // Corrected the dimensions of b
+
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[i].length; j++) {
+                b[j][i] = a[i][j];
+            }
+        }
+
+        System.out.println("Transposed Matrix:");
+        for (int i = 0; i < b.length; i++) {
+            for (int j = 0; j < b[i].length; j++) {
+                System.out.print(b[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+------------------------------------------------------------------------------------
+Sum Of Diagonal By using Single For Loop
+package TwoD_Array07;
+
+public class SUmOfDiagonalUsingSingleForLoop {
+public static void main(String[] args) {
+	int a[][]= {
+			{1,2,3},
+			{3,1,4},
+			{5,7,4}
+	};
+	int sum =0;
+	for(int i =0;i<a.length;i++) {
+		sum+=a[i][i];
+		if(i!=a.length-1-i)
+		sum+=a[i][a.length-1-i];
+	}
+	System.out.println(sum);
+}
+}
+
+------------------------------------------------------
+Multiplication of Two Array
+
+package TwoD_Array07;
+
+import java.util.Arrays;
+
+public class MultiplicationOftwoArray {
+public static void main(String[] args) {
+	int[][] a = { { 1, 2, 3 }, { 1, 4, 5 }, { 6, 5, 4 } };
+	int[][] b = { { 1, 1, 1 }, { 1, 1, 1 }, { 1, 1, 1 } };
+	int[][] c = new int[a.length][a.length]; 
+	for(int i =0;i<a.length;i++) {
+		for(int j =0;j<a.length;j++) {
+			for(int k =0;k<a.length;k++) {
+				c[i][j]+=a[i][k]*b[k][j];
+			}
+		}
+	}
+	for(int[]n:c) {
+		System.out.println(Arrays.toString(n));
+	}
+}
+}
+
+------------------------------------------------------------------------
+Pascal Triangle
+
+package TwoD_Array07;
+public class PascalTriangle {
+public static void main(String[] args) {
+	int n =5;
+	int sp =n-1;
+	int st =1;
+	int [][]a=new int [n][];
+	pascal(a);
+	for(int i =1;i<=n;i++) {
+		for(int j =1;j<=sp;j++)System.out.print(" ");
+		for(int k =1;k<=st;k++) 
+			System.out.print(a[i-1][k-1]+" ");
+		System.out.println();
+		sp--;
+		st++;
+	}
+}
+public static void pascal(int [][] a) {
+	for(int i =0;i<a.length;i++) {
+		a[i]=new int [i+1];
+		for(int j =0;j<a[i].length;j++) {
+			if(j==0 || i==j)
+				a[i][j]=1;
+			else a[i][j]=a[i-1][j-1]+a[i-1][j];
+		}
+	}
+}
+}
+------------------------------------------------------------------------------------
+Sphiral Matrix
+
+package TwoD_Array08;
+
+public class SphiralMatrix {
+public static void main(String[] args) {
+	int n =5;
+	int [][]a = new int[n][n];
+	int row =0;
+	int col =-1;
+	char dir ='r';
+	for(int i =1;i<=n*n;i++) {
+		switch(dir) {
+		case 'r':{
+		col++;
+		a[row][col]=i;
+		if(col==a.length-1 || a[row][col+1]!=0)
+			dir='d';
+		}
+		break;
+		case 'd':{
+			row++;
+			a[row][col]=i;
+			if(row==a.length-1 || a[row+1][col]!=0)
+				dir='l';
+			}
+		break;
+		case 'l':{
+			col--;
+			a[row][col]=i;
+			if(col==0 || a[row][col-1]!=0)
+				dir='u';
+			}
+		break;
+		case 'u':{
+			row--;
+			a[row][col]=i;
+			if(a[row-1][col]!=0)
+				dir='r';
+			}
+		break;
+	}
+}
+	for(int i =0;i<a.length;i++) {
+		for(int j =0;j<a[i].length;j++) {
+			System.out.print(a[i][j]+"\t");
+		}
+		System.out.println();
+	}
+}
+}
+
+
+
+

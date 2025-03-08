@@ -1,15 +1,18 @@
-
+import java.util.Arrays;
 public class Anagram {
-public static void main(String[] args) {
-	System.out.println(isAnagram("listen","silent"));
-}
-static boolean isAnagram(String s1,String s2) {
-	while(true) {
-		if(s1.length()!=s2.length())return false;
-		else if(s1.length()==0 && s2.length()==0)return true;
-		char ch =s1.charAt(0);
-		s1=s1.replace(ch+ " "+"", s2);
-		s2=s2.replace(ch+""+"", s2);
-	}
-}
+    public static void main(String[] args) {
+        System.out.println(isAnagram("listen", "silent"));
+    }    
+    static boolean isAnagram(String s1, String s2) {
+        if (s1.length() != s2.length()) {
+            return false;
+        }
+        // Convert strings to character arrays and sort them
+        char[] arr1 = s1.toCharArray();
+        char[] arr2 = s2.toCharArray();
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+        // Compare the sorted arrays
+        return Arrays.equals(arr1, arr2);
+    }
 }
