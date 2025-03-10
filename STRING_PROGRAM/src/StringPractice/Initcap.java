@@ -13,6 +13,6 @@ public static void main(String[] args) {
 			if(ch[i]>='a'&& ch[i]<='z')ch[i]-=32;
 		}
 	}
-	System.out.println(ch);
+	System.out.println(new String(ch));
 }
 }
