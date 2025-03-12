@@ -1,7 +1,5 @@
 package StringPractice;
-
 import java.util.Scanner;
-
 public class ReverseSentence {
 public static void main(String[] args) {
 	System.out.println("ENter a String");

@@ -2,15 +2,17 @@ package StringProgram;
 
 import java.util.Scanner;
 
-public class ReverseString {
+public class StringInitcap {
 public static void main(String[] args) {
 	System.out.println("Enter a String");
 	Scanner sc = new Scanner(System.in);
 	String s = sc.nextLine();
-	String res ="";
-	for(int i =s.length()-1;i>=0;i--) {
-		res+=s.charAt(i);
+	char ch[]=s.toCharArray();
+	for(int i=0;i<s.length();i++) {
+		if(i==0 || ch[i-1]==' ') {
+			if(ch[i]>='a'&& ch[i]<='z')ch[i]-=32;
+		}
 	}
-	System.out.println(res);
+	System.out.println(new String(ch));
 }
 }
