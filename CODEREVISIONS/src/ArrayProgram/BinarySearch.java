@@ -1,9 +1,10 @@
-package ArrayPractice1;
+package ArrayProgram;
 public class BinarySearch {
 	public static void main(String[] args) {
 		int a[] = { 1, 2, 3, 4, 5, 6 };
-		System.out.println(search(a, 5, 0, a.length - 1));
+		System.out.println(search(a, 3, 0, a.length - 1));
 	}
+
 	static int search(int a[], int k, int st, int end) {
 		if (st > end)
 			return -1;
