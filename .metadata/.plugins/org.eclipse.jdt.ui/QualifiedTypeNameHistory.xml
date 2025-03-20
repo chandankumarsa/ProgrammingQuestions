@@ -41,7 +41,6 @@
     <fullyQualifiedTypeName name="java.lang.ScopedValue"/>
     <fullyQualifiedTypeName name="java.util.Base64.Decoder"/>
     <fullyQualifiedTypeName name="java.lang.classfile.instruction.BranchInstruction"/>
-    <fullyQualifiedTypeName name="java.time.chrono.IsoChronology"/>
     <fullyQualifiedTypeName name="Rectangle"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
@@ -49,8 +48,9 @@
     <fullyQualifiedTypeName name="java.util.SortedMap"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="Practice19.Mergesort"/>
     <fullyQualifiedTypeName name="Practice20.SubStringPalindrome"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.time.chrono.IsoChronology"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>
