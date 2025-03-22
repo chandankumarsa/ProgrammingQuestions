@@ -1,0 +1,24 @@
+package NumberProgram;
+
+import java.util.Scanner;
+
+public class CalculateSumOFInteger {
+    public static void main(String[] args) {
+        System.out.println("Enter a number:");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        String str = "";
+        int sum = 0;
+        
+        for (int i = 1; i <= n; i++) {
+            sum += i;
+            str += i;
+            if (i < n) {
+                str += "+";
+            }
+        }
+        
+        System.out.println(str + " = " + sum);
+        sc.close();
+    }
+}
