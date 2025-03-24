@@ -1,0 +1,301 @@
+Q1: write a java program to reverse a string? 
+
+public class ReverseString {
+public static void main(String[] args) {
+	System.out.println("ENter a String");
+	Scanner sc = new Scanner(System.in);
+	String s = sc.nextLine();
+	String res ="";
+	for(int i=s.length()-1;i>=0;i--) {
+		res+=s.charAt(i);
+	}
+	System.out.println(res);
+}
+}
+--------------------------------------------------------------------------------------------
+Q2: write a java program to Arrange The Character In A Given Order  in a string ? 
+Input:"ram#123" output:"123#ram"
+
+public class ArrangeCharacterInGivenOrder {
+public static void main(String[] args) {
+	System.out.println("ENter a String");
+	Scanner sc = new Scanner(System.in);
+	String s = sc.nextLine();
+	String uc="",lc="",nc="",sp="",res="";
+	for(int i=0;i<s.length();i++) {
+		char ch =s.charAt(i);
+		if(ch>='0'&& ch<='9')nc+=ch;
+		else if(ch>='A'&& ch<='Z')uc+=ch;
+		else if(ch>='a'&& ch<='z')lc+=ch;
+		else sp+=ch;
+		
+	}
+	res+=nc+sp+lc;
+	System.out.println(res);
+}
+}
+--------------------------------------------------------------------------------------------
+Q3: write a java program to count words in a string? 
+
+public class CountWords {
+    public static void main(String[] args) {
+        System.out.println("Enter a string:");
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine().trim(); // Remove leading and trailing spaces
+        if (s.isEmpty()) { // Handle empty input case
+            System.out.println("Word count: 0");
+            return;
+        }
+        String[] words = s.split("\\s+"); // Split by one or more spaces
+        System.out.println("Word count: " + words.length);
+    }
+}
+
+--------------------------------------------------------------------------------------------
+Q4: write a java program to find given string is palindrome or 
+not? 
+public class GivenStringIsPalindromeOrNot {
+	public static void main(String[] args) {
+		System.out.println("Enter a String");
+		Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine();
+		System.out.println(isPalindrome(s));
+	}
+	static boolean  isPalindrome(String s) {
+		int i =0;
+		int j =s.length()-1;
+		while(i<j) {
+			if(s.charAt(i)!=s.charAt(j))return false;
+			i++;
+			j--;
+		}
+		return true;
+	}
+}
+
+--------------------------------------------------------------------------------------------
+Q5: write a java program to convert string to char array 
+without using in build function?  
+
+
+public class StringToCharArray {
+    public static void main(String[] args) {
+        System.out.println("Enter a string:");
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        // Convert string to char array manually
+        char[] charArray = new char[s.length()];
+        for (int i = 0; i < s.length(); i++) {
+            charArray[i] = s.charAt(i);  // Copy each character to the array
+        }
+        
+        // Display the char array
+        System.out.print("Character Array: ");
+        for (char ch : charArray) {
+            System.out.print(ch + " ");
+        }
+    }
+}
+--------------------------------------------------------------------------------------------
+Q6: write a java program to print sum of number present in a 
+string? 
+
+public class PrintSumofNumber {
+    public static void main(String[] args) {
+        System.out.println("Enter a String:");
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int sum = 0;
+        
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (ch >= '0' && ch <= '9') {
+                sum += ch - '0'; // Convert char to its integer value
+            }
+        }
+        
+        System.out.println("Sum: " + sum);
+    }
+}
+
+--------------------------------------------------------------------------------------------
+Q7: write a java program to find index value “ash123” where 
+key=’s’?  
+
+public class FindIndexValue {
+    public static void main(String[] args) {
+        String s = "ash123";
+        char key = 's';
+        
+        // Use indexOf() method to find the index of the character 's'
+        int index = s.indexOf(key);
+        
+        // Output the index value
+        System.out.println("Index of '" + key + "' in the string is: " + index);
+    }
+}
+--------------------------------------------------------------------------------------------
+Without Built-in Method:
+
+public class FindIndex {
+    public static void main(String[] args) {
+        String s = "ash123";
+        System.out.println(find(s, 's'));
+    }
+    
+    static int find(String s, char key) {
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == key) {
+                return i;  // Return index if the character is found
+            }
+        }
+        return -1;  // Return -1 if the character is not found
+    }
+}
+
+--------------------------------------------------------------------------------------------
+Q8:occurrences of each character in the given string ?
+
+public class OccurrenceOfCharacter {
+    public static void main(String[] args) {
+        System.out.println("Enter a String:");
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        char ch[] = s.toCharArray();
+        for (int i = 0; i < ch.length; i++) {
+            if (ch[i] == '\u0000') continue;  // Skip already counted characters
+            int count = 1;
+            // Check for occurrences of the character
+            for (int j = i + 1; j < ch.length; j++) {
+                if (ch[i] == ch[j]) {
+                    count++;
+                    ch[j] = '\u0000';  // Mark the character as counted
+                }
+            }
+
+            System.out.println(ch[i] + " : " + count);  // Print the count
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------
+Q9: input:” Ramana” output:” R@m@n@”? 
+
+import java.util.Scanner;
+
+public class ReplaceRepeatingCharactersWithAt {
+    public static void main(String[] args) {
+        System.out.println("Enter a String:");
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+
+        // Step 1: Identify repeating characters
+        String result = ""; // Initialize the result as an empty string
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+
+            // Check if the character is repeated in the string
+            if (s.indexOf(ch) != s.lastIndexOf(ch)) {
+                result += "@"; // Replace with '@' if repeated
+            } else {
+                result += ch; // Keep the character as it is if not repeated
+            }
+        }
+
+        // Step 2: Output the result string
+        System.out.println(result);
+    }
+}
+
+--------------------------------------------------------------------------------------------
+Q10:  write a java program to count vowel characters in a  
+string? 
+import java.util.Scanner;
+
+public class CountVowels {
+    public static void main(String[] args) {
+        System.out.println("Enter a String:");
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+
+        // Initialize a variable to count vowels
+        int count = 0;
+
+        // Loop through the string and check for vowels
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+
+            // Check if the character is a vowel
+            ch = Character.toLowerCase(ch); // Convert to lowercase to handle both cases
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                count++; // Increment count if it's a vowel
+            }
+        }
+
+        // Output the result
+        System.out.println("Number of vowels: " + count);
+    }
+}
+
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------

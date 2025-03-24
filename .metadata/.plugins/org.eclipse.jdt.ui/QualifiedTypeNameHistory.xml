@@ -48,7 +48,6 @@
     <fullyQualifiedTypeName name="Practice19.Mergesort"/>
     <fullyQualifiedTypeName name="Practice20.SubStringPalindrome"/>
     <fullyQualifiedTypeName name="java.time.chrono.IsoChronology"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
     <fullyQualifiedTypeName name="java.io.File"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="ArrayProgram.Mergesort"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>

@@ -6,7 +6,6 @@ public class OccurrenceOfEachCharacter {
         for (int i = 0; i < ch.length; i++) {
             if (ch[i] == '\u0000')  
                 continue;
-
             int count = 1; // Initialize with 1 to count the first occurrence
             for (int j = i + 1; j < ch.length; j++) {
                 if (ch[i] == ch[j]) {
