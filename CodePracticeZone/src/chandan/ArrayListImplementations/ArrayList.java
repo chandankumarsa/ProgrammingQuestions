@@ -1,18 +1,17 @@
-package com.ArrayLIst1;
+package chandan.ArrayListImplementations;
 
 public class ArrayList {
 	public Object o[] = new Object[10];
 	int count = 0;
 
 	public void add(Object ele) {
-		if (count >= o.length) {
+		if (count >= o.length)
 			increase();
-		}
 		o[count++] = ele;
 	}
 
 	public void increase() {
-		Object a[] = new Object[o.length*2];
+		Object a[] = new Object[o.length * 2];
 		for (int i = 0; i < o.length; i++) {
 			a[i] = o[i];
 		}
@@ -28,29 +27,29 @@ public class ArrayList {
 	}
 
 	public Object get(int index) {
-		if (index < 0 || index > size())
+		if (index < 0 || index >= size())
 			throw new ArrayIndexOutOfBoundsException();
 		return o[index];
-
 	}
 
-	public void addPos(int index, Object ele) {
-		if (index < 0 || index > size())
+	public void addpos(int index, Object ele) {
+		if (index < 0 || index >= size())
 			throw new ArrayIndexOutOfBoundsException();
 		if (count >= o.length)
 			increase();
-		for (int i = size(); i > index; i--) {
+		for (int i = size(); i >index; i--) {
 			o[i] = o[i - 1];
-			o[index] = ele;
-			count++;
 		}
+		o[index] = ele;
+		count++;
 	}
+
 	public void remove(int index) {
-		if (index < 0 || index > size())
+		if (index < 0 || index >= size())
 			throw new ArrayIndexOutOfBoundsException();
 		for (int i = index; i < size(); i++) {
 			o[i] = o[i + 1];
-			count--;
 		}
+		count--;
 	}
 }
