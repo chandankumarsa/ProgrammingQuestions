@@ -25,7 +25,6 @@ public class ArrayList {
 	public boolean isEmpty() {
 		return count == 0;
 	}
-
 	public void add(int index, Object ele) {
 		if (index < 0 || index > size())
 			throw new IndexOutOfBoundsException();

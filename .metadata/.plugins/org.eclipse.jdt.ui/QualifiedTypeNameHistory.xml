@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.awt.font.NumericShaper.Range"/>
-    <fullyQualifiedTypeName name="Jan29.Factorial"/>
-    <fullyQualifiedTypeName name="java.lang.Readable"/>
-    <fullyQualifiedTypeName name="org.w3c.dom.css.Rect"/>
     <fullyQualifiedTypeName name="I_CopyConstructor.Rectangle"/>
     <fullyQualifiedTypeName name="J_FactoryMethod.Book"/>
     <fullyQualifiedTypeName name="J_FactoryMethod.BookCreator"/>
@@ -30,7 +26,6 @@
     <fullyQualifiedTypeName name="Rectangle"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="Mythread"/>
-    <fullyQualifiedTypeName name="java.util.SortedMap"/>
     <fullyQualifiedTypeName name="Practice19.Mergesort"/>
     <fullyQualifiedTypeName name="Practice20.SubStringPalindrome"/>
     <fullyQualifiedTypeName name="java.time.chrono.IsoChronology"/>
@@ -54,10 +49,15 @@
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.classfile.instruction.NewReferenceArrayInstruction"/>
     <fullyQualifiedTypeName name="int"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="com.chandan.ArrayList.ArrayList"/>
     <fullyQualifiedTypeName name="java.lang.Object"/>
     <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
-    <fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="com.chandan.LinkedListImplementations.LinkedListImp"/>
+    <fullyQualifiedTypeName name="Java_LinkedlistImplementations.LinkedList"/>
+    <fullyQualifiedTypeName name="PracticeImplementations.Node"/>
+    <fullyQualifiedTypeName name="PracticeImplementations.LinkedList"/>
+    <fullyQualifiedTypeName name="javax.print.attribute.Size2DSyntax"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.SortedMap"/>
+    <fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
 </qualifiedTypeNameHistroy>
