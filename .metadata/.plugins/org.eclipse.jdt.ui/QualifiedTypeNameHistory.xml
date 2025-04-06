@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="I_CopyConstructor.Rectangle"/>
-    <fullyQualifiedTypeName name="J_FactoryMethod.Book"/>
-    <fullyQualifiedTypeName name="J_FactoryMethod.BookCreator"/>
-    <fullyQualifiedTypeName name="java.lang.Package"/>
-    <fullyQualifiedTypeName name="M_MethodOverriding.Smart5g_Phone"/>
     <fullyQualifiedTypeName name="M_MethodOverriding.SmartPhone"/>
     <fullyQualifiedTypeName name="Feb4.Hcf"/>
     <fullyQualifiedTypeName name="Jan31.DigitCount"/>
@@ -51,13 +46,18 @@
     <fullyQualifiedTypeName name="int"/>
     <fullyQualifiedTypeName name="com.chandan.ArrayList.ArrayList"/>
     <fullyQualifiedTypeName name="java.lang.Object"/>
-    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="com.chandan.LinkedListImplementations.LinkedListImp"/>
     <fullyQualifiedTypeName name="Java_LinkedlistImplementations.LinkedList"/>
-    <fullyQualifiedTypeName name="PracticeImplementations.Node"/>
     <fullyQualifiedTypeName name="PracticeImplementations.LinkedList"/>
+    <fullyQualifiedTypeName name="DsaImplementations.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="javax.print.attribute.Size2DSyntax"/>
+    <fullyQualifiedTypeName name="DSA_implementations.Node"/>
+    <fullyQualifiedTypeName name="org.w3c.dom.Node"/>
+    <fullyQualifiedTypeName name="PracticeImplementations.Node"/>
+    <fullyQualifiedTypeName name="DoublyLinkedListImplimentations.Node"/>
+    <fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="DoublyLinkedListPractice.Node"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.SortedMap"/>
-    <fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
 </qualifiedTypeNameHistroy>
