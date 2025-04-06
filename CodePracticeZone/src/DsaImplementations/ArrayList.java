@@ -1,16 +1,17 @@
-package chandan.ArrayListImplementations;
+package DsaImplementations;
 
 public class ArrayList {
-	public Object o[] = new Object[10];
+	Object o[] = new Object[10];
 	int count = 0;
-
 	public void add(Object ele) {
-		if (count >= o.length)
-			increase();
+		if (count >= o.length) {
+			addFirst();
+			
+		}
 		o[count++] = ele;
 	}
 
-	public void increase() {
+	public void addFirst() {
 		Object a[] = new Object[o.length * 2];
 		for (int i = 0; i < o.length; i++) {
 			a[i] = o[i];
@@ -33,11 +34,13 @@ public class ArrayList {
 	}
 
 	public void addpos(int index, Object ele) {
-		if (index < 0 || index >= size())
+		if (index < 0 || index > size())
 			throw new ArrayIndexOutOfBoundsException();
-		if (count >= o.length)
-			increase();
-		for (int i = size(); i >index; i--) {
+		if (count >= o.length) {
+			addFirst();
+			
+		}
+		for (int i = size(); i > index; i--) {
 			o[i] = o[i - 1];
 		}
 		o[index] = ele;
@@ -45,11 +48,12 @@ public class ArrayList {
 	}
 
 	public void remove(int index) {
-		if (index < 0 || index >= size())
+		if (index < 0 || index >=size())
 			throw new ArrayIndexOutOfBoundsException();
-		for (int i = index; i < size(); i++) {
+		for (int i = index; i < size()-1; i++) {
 			o[i] = o[i + 1];
 		}
 		count--;
+
 	}
 }

@@ -50,7 +50,6 @@
     <fullyQualifiedTypeName name="Java_LinkedlistImplementations.LinkedList"/>
     <fullyQualifiedTypeName name="PracticeImplementations.LinkedList"/>
     <fullyQualifiedTypeName name="DsaImplementations.ArrayList"/>
-    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="javax.print.attribute.Size2DSyntax"/>
     <fullyQualifiedTypeName name="DSA_implementations.Node"/>
     <fullyQualifiedTypeName name="org.w3c.dom.Node"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="DoublyLinkedListPractice.Node"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.SortedMap"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
 </qualifiedTypeNameHistroy>
