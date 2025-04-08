@@ -1,4 +1,4 @@
-package ArrayLIstIMplementations;
+package ArrayLIst_Implementations;
 
 public class UserCode {
     public static void main(String[] args) {

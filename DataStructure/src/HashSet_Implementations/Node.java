@@ -1,18 +1,15 @@
-package DoublyLinkedListPractice;
+package HashSet_Implementations;
 
 public class Node {
 	Node next;
-	Node prev;
 	Object ele;
 
 	public Node(Object ele) {
 		this.ele = ele;
 	}
 
-	public Node(Node prev, Object ele, Node next) {
-		this.prev = prev;
+	public Node(Object ele, Node next) {
 		this.ele = ele;
 		this.next = next;
 	}
-
 }

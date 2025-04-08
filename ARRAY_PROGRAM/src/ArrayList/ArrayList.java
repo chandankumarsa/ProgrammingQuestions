@@ -1,24 +1,24 @@
-package DsaImplementations;
+package ArrayList;
 
 public class ArrayList {
 	Object o[] = new Object[10];
 	int count = 0;
+
 	public void add(Object ele) {
-		if (count >= o.length) {
-			addFirst();
-			
+		if (count > o.length) {
+			increase();
 		}
 		o[count++] = ele;
 	}
 
-	public void addFirst() {
+	public void increase() {
 		Object a[] = new Object[o.length * 2];
 		for (int i = 0; i < o.length; i++) {
 			a[i] = o[i];
 		}
 		o = a;
+		count++;
 	}
-
 	public int size() {
 		return count;
 	}
@@ -33,12 +33,11 @@ public class ArrayList {
 		return o[index];
 	}
 
-	public void addpos(int index, Object ele) {
-		if (index < 0 || index > size())
+	public void addPos(int index, Object ele) {
+		if (index < 0 || index >= size())
 			throw new ArrayIndexOutOfBoundsException();
-		if (count >= o.length) {
-			addFirst();
-			
+		if (index == size()) {
+			increase();
 		}
 		for (int i = size(); i > index; i--) {
 			o[i] = o[i - 1];
@@ -48,12 +47,12 @@ public class ArrayList {
 	}
 
 	public void remove(int index) {
-		if (index < 0 || index >=size())
+		if (index < 0 || index >= size())
 			throw new ArrayIndexOutOfBoundsException();
-		for (int i = index; i < size()-1; i++) {
+		for (int i = index; i < size() - 1; i++) {
 			o[i] = o[i + 1];
 		}
 		count--;
-
 	}
+
 }

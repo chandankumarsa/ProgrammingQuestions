@@ -1,8 +1,8 @@
-package SortingPractice;
+package SortingTechnique;
 
 import java.util.Arrays;
 
-public class Bubblesort {
+public class BubbleSort {
 	public static void main(String[] args) {
 		int a[] = { 6, 9, 4, 2 };
 		sort(a);
@@ -10,7 +10,7 @@ public class Bubblesort {
 	}
 
 	static void sort(int a[]) {
-		for (int i = 0; i < a.length - 1; i++) {
+		for (int i = 0; i < a.length; i++) {
 			for (int j = 0; j < a.length - 1 - i; j++) {
 				if (a[j] > a[j + 1]) {
 					int temp = a[j];
@@ -19,6 +19,5 @@ public class Bubblesort {
 				}
 			}
 		}
-
 	}
 }

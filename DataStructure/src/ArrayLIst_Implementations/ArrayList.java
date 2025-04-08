@@ -1,4 +1,4 @@
-package ArrayLIstIMplementations;
+package ArrayLIst_Implementations;
 
 public class ArrayList {
     Object[] o = new Object[10];

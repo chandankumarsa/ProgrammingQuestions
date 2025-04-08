@@ -1,7 +1,7 @@
 package Sorting;
 import java.util.Arrays;
 
-public class MargesortCorrected {
+public class Margesort {
     public static void main(String[] args) {
         int a[] = {5, 6, 7, 9, 4, 8};
         sort(a);
