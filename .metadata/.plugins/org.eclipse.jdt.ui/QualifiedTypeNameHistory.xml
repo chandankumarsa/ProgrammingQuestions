@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="Jan31.DigitCount"/>
-    <fullyQualifiedTypeName name="Recurssion10.SumOfEvenOddPrint"/>
     <fullyQualifiedTypeName name="Employee"/>
     <fullyQualifiedTypeName name="java.net.SecureCacheResponse"/>
     <fullyQualifiedTypeName name="java.lang.Character"/>
@@ -38,7 +36,6 @@
     <fullyQualifiedTypeName name="ArrayProgramPractice.BinarySearch"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.lang.classfile.instruction.NewMultiArrayInstruction"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.classfile.instruction.NewReferenceArrayInstruction"/>
     <fullyQualifiedTypeName name="int"/>
@@ -57,7 +54,10 @@
     <fullyQualifiedTypeName name="java.lang.Object"/>
     <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="java.util.SortedMap"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="Comparable.StudentDriver"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="Comparable.Student"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>
