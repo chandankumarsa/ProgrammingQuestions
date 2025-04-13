@@ -2,9 +2,9 @@ package SortingPractice;
 
 import java.util.Arrays;
 
-public class INsertionsort {
+public class InsertionSort {
 	public static void main(String[] args) {
-		int a[] = { 69, 2, 14, 5 };
+		int a[] = { 6, 2, 69, 1 };
 		sort(a);
 		System.out.println(Arrays.toString(a));
 	}
@@ -16,8 +16,11 @@ public class INsertionsort {
 			while (j >= 0 && a[j] > k) {
 				a[j + 1] = a[j];
 				j--;
+
 			}
 			a[j + 1] = k;
 		}
 	}
 }
+//12 APRIL 2023 1/06/2023
+//12 APRIL 2025
